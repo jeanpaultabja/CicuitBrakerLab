@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+ name: cicuitbrakerlab
+spec:
+ type: NodePort
+ selector:
+   app: cicuitbrakerlab
+ ports:
+   - name: client
+     protocol: TCP
+     port: 8080
+     nodePort: 32085
